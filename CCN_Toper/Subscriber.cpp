@@ -8,8 +8,7 @@
 #include "Subscriber.h"
 #include"openssl/md5.h"
 Subscriber::Subscriber(std::string localIP, string filename) :
-		DataPanel(localIP), m_subscribeThreading(this) {
-	m_filename = filename;
+		DataPanel(localIP,filename), m_subscribeThreading(this) {
 	m_sequenceNumber = 0;
 	m_subscribeThreading.create(&m_subscribeThreading);
 }
@@ -58,7 +57,7 @@ void Subscriber::handlePublish(Message& msg) {
 }
 
 string Subscriber::getContentName(vector<string> subList) {
-	ifstream infile(m_filename.c_str());
+	ifstream infile(getFileName().c_str());
 	if (infile) {
 		char buffer[1024];
 		memset(buffer, 0, sizeof(buffer));
@@ -73,7 +72,7 @@ string Subscriber::getContentName(vector<string> subList) {
 			}
 		}
 	} else {
-		cerr << "open " << m_filename << " failed" << endl;
+		cerr << "open " << getFileName() << " failed" << endl;
 	}
 
 	string contentName = "";

@@ -33,7 +33,6 @@ private:
 private:
 	SubscribeThreading m_subscribeThreading; //the threading for sending subscription message
 	int m_sequenceNumber;
-	string m_filename;
 	map<string,bool>m_subscribeCdList;
 };
 

@@ -13,8 +13,8 @@
 #include<set>
 using namespace std;
 
-Publisher::Publisher(std::string localIP) :
-		DataPanel(localIP), m_publishThreading(this) {
+Publisher::Publisher(std::string localIP,string filename) :
+		DataPanel(localIP,filename), m_publishThreading(this) {
 
 	m_sequenceNumber=0;
 	m_publishThreading.create(&m_publishThreading);
@@ -30,7 +30,7 @@ void Publisher::publish() {
 
 	if (m_contentSet.size() == 0) {
 		//read the content from the file
-		readContent("./Files/publishcontent.txt");
+		readContent(getFileName());
 	}
 
 	int delNum = 0;

@@ -18,7 +18,7 @@
 
 class Publisher: public DataPanel {
 public:
-	Publisher(std::string localIP);
+	Publisher(std::string localIP,std::string filename);
 	virtual ~Publisher();
 
 	/*
