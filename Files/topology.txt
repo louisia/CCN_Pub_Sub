@@ -1,0 +1,95 @@
+# this is a test topology file
+
+# each line mean the link of the topology
+
+# rot	:	publish subscribe router
+
+# rrot	: 	rendezvous  publish subscribe router
+
+# erot	:	edge  publish subscribe router
+
+# sub 	: 	subscriber
+
+# pub 	: 	publisher 
+
+# this topology including:
+#						 1	publish subscribe router 
+#						 1	edge  publish subscribe router  
+#						 1 	rendezvous  publish subscribe router
+#						 1 	subscriber
+#						 1  publisher
+
+# Topology1
+
+#sub1 -- rot1
+
+#rot1 -- erot1
+
+#erot1 -- rrot1
+
+#rrot1 -- pub1
+
+
+
+
+
+# Topology2
+
+#sub1 -- rot1
+
+#sub2 -- rot1
+
+#rot1 -- erot1
+
+#erot1 -- rrot1
+
+#rrot1 -- pub1
+
+
+
+
+# Topology3
+
+#sub1 -- rot1
+
+#rot1 -- erot1
+
+#erot1 -- rrot1
+
+#rrot1 -- pub1
+
+#rrot1--sub2
+
+
+
+
+# Topology4
+
+sub1 -- erot1
+
+sub2 -- erot2
+
+erot1 -- rrot1
+
+erot2 -- rrot1
+
+rrot1 -- rot1
+
+rot1  -- sub3
+
+rot1  -- pub1
+
+
+
+
+# Topology5
+
+#sub1 -- rot1
+
+#rot1 -- erot1
+
+#erot1 -- rrot1
+
+#rrot1 -- pub1
+
+#rrot1 -- sub2
