@@ -1,0 +1,1442 @@
+***********ControlPanel::regist() start***********
+--------------Message Print--------------
+packet type: Regist
+addr: 2001:250:5004:1013:25d4:adcf:a0be:4196
+csPort: 9002
+crPort: 9003
+nsPort: 9000
+nrPort: 9001
+-----------------------------------------
+2001:250:5004:1013:25d4:adcf:a0be:4196:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+***********ControlPanel::regist() end***************
+ the id assigned: 1
+--------------Message Print--------------
+packet type: IDAssigned
+IDAssigned: 1
+-----------------------------------------
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+ ControlPanel::running receive adjacent table...: 1
+--------------Message Print--------------
+packet type: AdjacentTable
+current roleID._role: 5 current roleID._id: 1
+numOfAdjacent: 3
+addr: 2001:250:5004:1013:89b1:82a6:126d:131a
+csPort: 9002
+crPort: 9003
+nsPort: 9000
+nrPort: 9001
+addr: 2001:250:5004:1013:8c08:87b8:f0fa:c249
+csPort: 9002
+crPort: 9003
+nsPort: 9000
+nrPort: 9001
+addr: 2001:250:5004:1013:c1ba:ae11:20a8:6046
+csPort: 9002
+crPort: 9003
+nsPort: 9000
+nrPort: 9001
+-----------------------------------------
+multicast：Resource temporarily unavailable errno: 11
+ControlPanel::running receive router table...: 1
+--------------Message Print--------------
+packet type: RouterTable
+_role: 2_id: 1
+nextHop._role: 1 nextHop._id: 1 
+_role: 1_id: 1
+nextHop._role: 1 nextHop._id: 1 
+_role: 2_id: 2
+nextHop._role: 1 nextHop._id: 2 
+_role: 1_id: 2
+nextHop._role: 1 nextHop._id: 2 
+_role: 5_id: 1
+
+_role: 2_id: 3
+nextHop._role: 3 nextHop._id: 1 
+_role: 5_id: 2
+nextHop._role: 3 nextHop._id: 1 
+_role: 4_id: 1
+nextHop._role: 3 nextHop._id: 1 
+_role: 3_id: 1
+nextHop._role: 3 nextHop._id: 1 
+_role: 1_id: 3
+nextHop._role: 3 nextHop._id: 1 
+_role: 4_id: 2
+nextHop._role: 3 nextHop._id: 1 
+_role: 2_id: 4
+nextHop._role: 3 nextHop._id: 1 
+-----------------------------------------
+ControlPanel::running injectTransFaceTableToDataPanel...: 1
+ControlPanel::running injectFIBToDataPanel...: 1
+-----setFIB---FIB----------------
+Name: RRot-1 FaceList: 2 
+-----------------------------------
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+**********recv subscribe start***********
+--------------Message Print--------------
+PacketType:	7
+role		2
+id		1
+rendezvous		RRot-1
+contentID		/sports/football/Lionel Messi
+sequenceNumber		0
+-----------------------------------------
+**********recv subscribe end*************
+**********send groupIpRequest start***********
+--------------Message Print--------------
+PacketType:	10
+role		2
+id		1
+rendezvous		RRot-1
+contentID		/sports/football/Lionel Messi
+sequenceNumber		0
+-----------------------------------------
+**********send groupIpRequest end***********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+*********recv groupIpresponse start********
+--------------Message Print--------------
+PacketType:	11
+contentname		/sports/football/Lionel Messi
+joinGroupIp		ff02:87c7:bc07:9190:bf49:7bb9:9d3f:7438
+-----------------------------------------
+*********recv groupIpresponse end**********
+join group succeed ff02:87c7:bc07:9190:bf49:7bb9:9d3f:7438
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		2
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		2
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+**********recv subscribe start***********
+--------------Message Print--------------
+PacketType:	7
+role		2
+id		2
+rendezvous		RRot-1
+contentID		/sports/football
+sequenceNumber		0
+-----------------------------------------
+**********recv subscribe end*************
+**********send groupIpRequest start***********
+--------------Message Print--------------
+PacketType:	10
+role		2
+id		2
+rendezvous		RRot-1
+contentID		/sports/football
+sequenceNumber		0
+-----------------------------------------
+**********send groupIpRequest end***********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+*********recv groupIpresponse start********
+--------------Message Print--------------
+PacketType:	11
+contentname		/sports/football
+joinGroupIp		ff02:c283:360b:f43c:63be:694b:4c7b:f77c
+quitGroupCDs		/sports/football/Lionel Messi
+quitGroupIPs		ff02:87c7:bc07:9190:bf49:7bb9:9d3f:7438
+-----------------------------------------
+*********recv groupIpresponse end**********
+join group succeed ff02:c283:360b:f43c:63be:694b:4c7b:f77c
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		2
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		2
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		4
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		4
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		4
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		4
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		4
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		6
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		6
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		6
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		6
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		6
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		8
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		8
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		8
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		8
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		8
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		10
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		10
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		10
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		10
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		10
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		12
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		12
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		12
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		12
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		12
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+**********recv subscribe start***********
+--------------Message Print--------------
+PacketType:	7
+role		2
+id		1
+rendezvous		RRot-1
+contentID		/sports/football
+sequenceNumber		1
+-----------------------------------------
+**********recv subscribe end*************
+********msg is local released***********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+**********recv subscribe start***********
+--------------Message Print--------------
+PacketType:	7
+role		2
+id		2
+rendezvous		RRot-1
+contentID		/sports/basketball
+sequenceNumber		1
+-----------------------------------------
+**********recv subscribe end*************
+**********send groupIpRequest start***********
+--------------Message Print--------------
+PacketType:	10
+role		2
+id		2
+rendezvous		RRot-1
+contentID		/sports/basketball
+sequenceNumber		1
+-----------------------------------------
+**********send groupIpRequest end***********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+*********recv groupIpresponse start********
+--------------Message Print--------------
+PacketType:	11
+contentname		/sports/basketball
+joinGroupIp		ff02:4b1d:5df0:3fa0:45a0:2d5f:6f42:ebb2
+-----------------------------------------
+*********recv groupIpresponse end**********
+join group succeed ff02:4b1d:5df0:3fa0:45a0:2d5f:6f42:ebb2
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		14
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		14
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		14
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		14
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		14
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		14
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		15
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		15
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		16
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		16
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		16
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		16
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		16
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		16
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		17
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		17
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		18
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		18
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		18
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		18
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		18
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		18
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		19
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		19
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		20
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		20
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		20
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		20
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		20
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		20
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		21
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		21
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		22
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		22
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		22
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		22
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		22
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		22
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		23
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		23
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		24
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		24
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		24
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		24
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		24
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		24
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		25
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		25
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		26
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		26
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		26
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		26
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		26
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		26
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		27
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		27
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		28
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		28
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		28
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+*********recv publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		28
+-----------------------------------------
+*********recv publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		28
+-----------------------------------------
+*********send publish end**********
+*********send publish start********
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		28
+-----------------------------------------
+*********send publish end**********
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:89b1:82a6:126d:131a: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9000 sendTo: recev ack succeed...2001:250:5004:1013:8c08:87b8:f0fa:c249: 9001
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
+multicast：Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:25d4:adcf:a0be:4196:9003 Resource temporarily unavailable errno: 11
