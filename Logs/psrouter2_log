@@ -1,0 +1,1221 @@
+***********ControlPanel::regist() start***********
+--------------Message Print--------------
+packet type: Regist
+addr: 2001:250:5004:1013:814a:8285:75d2:3d84
+csPort: 9002
+crPort: 9003
+nsPort: 9000
+nrPort: 9001
+-----------------------------------------
+2001:250:5004:1013:814a:8285:75d2:3d84:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+***********ControlPanel::regist() end***************
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+ the id assigned: 3
+--------------Message Print--------------
+packet type: IDAssigned
+IDAssigned: 3
+-----------------------------------------
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+ ControlPanel::running receive adjacent table...: 3
+--------------Message Print--------------
+packet type: AdjacentTable
+current roleID._role: 1 current roleID._id: 3
+numOfAdjacent: 3
+addr: 2001:250:5004:1013:c1ba:ae11:20a8:6046
+csPort: 9002
+crPort: 9003
+nsPort: 9000
+nrPort: 9001
+addr: 2001:250:5004:1013:c487:44c9:2759:e136
+csPort: 9002
+crPort: 9003
+nsPort: 9000
+nrPort: 9001
+addr: 2001:250:5004:1013:5c58:87b6:e762:9a46
+csPort: 9002
+crPort: 9003
+nsPort: 9000
+nrPort: 9001
+-----------------------------------------
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+ControlPanel::running receive router table...: 3
+--------------Message Print--------------
+packet type: RouterTable
+_role: 2_id: 1
+nextHop._role: 3 nextHop._id: 1 
+_role: 1_id: 1
+nextHop._role: 3 nextHop._id: 1 
+_role: 2_id: 2
+nextHop._role: 3 nextHop._id: 1 
+_role: 1_id: 2
+nextHop._role: 3 nextHop._id: 1 
+_role: 5_id: 1
+nextHop._role: 3 nextHop._id: 1 
+_role: 2_id: 3
+nextHop._role: 3 nextHop._id: 1 
+_role: 5_id: 2
+nextHop._role: 3 nextHop._id: 1 
+_role: 4_id: 1
+nextHop._role: 3 nextHop._id: 1 
+_role: 3_id: 1
+nextHop._role: 3 nextHop._id: 1 
+_role: 1_id: 3
+
+_role: 4_id: 2
+nextHop._role: 4 nextHop._id: 2 
+_role: 2_id: 4
+nextHop._role: 2 nextHop._id: 4 
+-----------------------------------------
+ControlPanel::running injectTransFaceTableToDataPanel...: 3
+ControlPanel::running injectFIBToDataPanel...: 3
+-----setFIB---FIB----------------
+Name: RRot-1 FaceList: 0 
+-----------------------------------
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+***************recv subscribe start************
+--------------Message Print--------------
+PacketType:	7
+role		2
+id		4
+rendezvous		RRot-1
+contentID		/sports/basketball
+sequenceNumber		0
+-----------------------------------------
+***************recv subscribe end************
+***************send subscribe start************
+--------------Message Print--------------
+PacketType:	7
+role		2
+id		4
+rendezvous		RRot-1
+contentID		/sports/basketball
+sequenceNumber		0
+-----------------------------------------
+***************send subscribe end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		1
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		1
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		1
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		1
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		2
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		2
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		3
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		3
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		3
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		3
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		4
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		4
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		5
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		5
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		5
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		5
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		6
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		6
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		7
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		7
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		7
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		7
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		8
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		8
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		9
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		9
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		9
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		9
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		10
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		10
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		11
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		11
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		11
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		11
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		12
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		12
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		13
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		13
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		13
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		13
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		14
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		14
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		15
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		15
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		15
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		15
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		16
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		16
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		17
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		17
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		17
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		17
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		18
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		18
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		19
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		19
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		19
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		19
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		20
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		20
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		21
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		21
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		21
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		21
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		22
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		22
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		23
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		23
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		23
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		23
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		24
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		24
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		25
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		25
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		25
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		25
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		26
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		26
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+***************recv publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		27
+-----------------------------------------
+***************recv publish end************
+***************send publish start************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		27
+-----------------------------------------
+***************send publish end************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:5c58:87b6:e762:9a46: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		27
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports
+content		hello sports
+sequenceNumber		27
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+**********recv rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		28
+-----------------------------------------
+**********recv rpublish end ************
+**********send rpublish start************
+--------------Message Print--------------
+PacketType:	9
+role		4
+id		2
+rendezvous		RRot-1
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		28
+-----------------------------------------
+**********send rpublish end ************
+2001:250:5004:1013:814a:8285:75d2:3d84:9000 sendTo: recev ack succeed...2001:250:5004:1013:c1ba:ae11:20a8:6046: 9001
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:814a:8285:75d2:3d84:9001 Resource temporarily unavailable errno: 11

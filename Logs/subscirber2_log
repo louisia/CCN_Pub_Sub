@@ -1,0 +1,1051 @@
+***********ControlPanel::regist() start***********
+--------------Message Print--------------
+packet type: Regist
+addr: 2001:250:5004:1013:c07a:84d0:4bb1:d42b
+csPort: 9002
+crPort: 9003
+nsPort: 9000
+nrPort: 9001
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+***********ControlPanel::regist() end***************
+ the id assigned: 3
+--------------Message Print--------------
+packet type: IDAssigned
+IDAssigned: 3
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+ ControlPanel::running receive adjacent table...: 3
+--------------Message Print--------------
+packet type: AdjacentTable
+current roleID._role: 2 current roleID._id: 3
+numOfAdjacent: 1
+addr: 2001:250:5004:1013:cd1e:d8b3:6bcc:5b07
+csPort: 9002
+crPort: 9003
+nsPort: 9000
+nrPort: 9001
+-----------------------------------------
+ControlPanel::running receive router table...: 3
+--------------Message Print--------------
+packet type: RouterTable
+_role: 2_id: 1
+nextHop._role: 5 nextHop._id: 2 
+_role: 1_id: 1
+nextHop._role: 5 nextHop._id: 2 
+_role: 2_id: 2
+nextHop._role: 5 nextHop._id: 2 
+_role: 1_id: 2
+nextHop._role: 5 nextHop._id: 2 
+_role: 5_id: 1
+nextHop._role: 5 nextHop._id: 2 
+_role: 2_id: 3
+
+_role: 5_id: 2
+nextHop._role: 5 nextHop._id: 2 
+_role: 4_id: 1
+nextHop._role: 5 nextHop._id: 2 
+_role: 3_id: 1
+nextHop._role: 5 nextHop._id: 2 
+_role: 1_id: 3
+nextHop._role: 5 nextHop._id: 2 
+_role: 4_id: 2
+nextHop._role: 5 nextHop._id: 2 
+_role: 2_id: 4
+nextHop._role: 5 nextHop._id: 2 
+-----------------------------------------
+ControlPanel::running injectTransFaceTableToDataPanel...: 3
+ControlPanel::running injectFIBToDataPanel...: 3
+-----setFIB---FIB----------------
+Name: RRot-1 FaceList: 0 
+-----------------------------------
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+SubListDownload receving msg.....
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+**********************weight start测试****************
+contentName:/sports,RRot:RRot-1,weight:2833212593
+**********************weight end测试****************
+**********subscribeSendMsg() start*************
+--------------Message Print--------------
+PacketType:	7
+role		2
+id		3
+rendezvous		RRot-1
+contentID		/sports
+sequenceNumber		0
+-----------------------------------------
+**********subscribeSendMsg() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9000 sendTo: recev ack succeed...2001:250:5004:1013:cd1e:d8b3:6bcc:5b07: 9001
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		3
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		3
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		4
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		4
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		5
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		5
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		6
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		6
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		7
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		7
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		8
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		8
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		9
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		9
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		10
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		10
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		11
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		11
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		12
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		12
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		13
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		13
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		14
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		14
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		15
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		15
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		16
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		16
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		17
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		17
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		18
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		18
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		19
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		19
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		20
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		20
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		21
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		21
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		22
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		22
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		23
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		23
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		24
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		24
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		25
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		25
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		26
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		26
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/basketball
+content		hello sports basketball
+sequenceNumber		27
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports
+content		hello sports
+sequenceNumber		27
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		1
+contentName		/sports/football/Lionel Messi
+content		hello sports football lionel messi 
+sequenceNumber		28
+-----------------------------------------
+**********handlePublish() end*************
+**********handlePublish() start*************
+--------------Message Print--------------
+PacketType:	8
+role		4
+id		2
+contentName		/sports/football
+content		hello sports football
+sequenceNumber		28
+-----------------------------------------
+**********handlePublish() end*************
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9003 Resource temporarily unavailable errno: 11
+--------------Message Print--------------
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9002 sendTo: recev ack succeed...2001:250:5004:1013:7d67:67d7:c82c:de7: 9001
+SubListDownload receving msg.....
+--------------Message Print--------------
+/sports
+/sports/basketball
+/sports/football
+/sports/football/Lionel Messi
+-----------------------------------------
+2001:250:5004:1013:c07a:84d0:4bb1:d42b:9001 Resource temporarily unavailable errno: 11
