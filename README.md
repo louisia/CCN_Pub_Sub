@@ -10,7 +10,7 @@
 2. sudo apt-get install libssl-dev
 
 # 安装jsoncpp
-1. 安装scons，安装json，[参考])http://blog.csdn.net/khalily/article/details/8844546)
+1. 安装scons，安装json，[参考](http://blog.csdn.net/khalily/article/details/8844546)
 2. 将lib文件下的文件，更名为libjson.a和libjson.so放到/usr/local/lib目录下
 3. 将include文件下的文件，放到/usr/include目录下
 4. 使用ldconfig命令更新
