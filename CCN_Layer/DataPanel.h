@@ -13,7 +13,7 @@
 #include "CheckerImp.h"
 class DataPanel: public Panel, public CheckerImp, public Threading {
 public:
-    DataPanel( std::string localIP );
+    DataPanel( std::string localIP,string filename="" );
     virtual ~DataPanel();
 
     /*
@@ -58,6 +58,9 @@ public:
 
     map<string, unsigned long> getRRotSet();
 
+    string getFileName();
+
+
 protected:
     /*
      * function: handle the message received
@@ -73,7 +76,6 @@ protected:
     std::vector< int > getFaceList( std::string contentName );
 
 
-protected:
 
 private:
     Checker m_checker;                                 //the checker to check the time out item
@@ -84,6 +86,8 @@ private:
 
     std::vector< std::string > m_subList;              //the subscription list
     pthread_mutex_t m_subListMutex;                    //the mutex of the subscription list
+    std::string m_filename;
+
 };
 
 #endif /* DATAPANEL_H_ */

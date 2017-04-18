@@ -83,7 +83,7 @@ void SubListUploader::check() {
 	//upload the list of subscription
 
 	//read the subscription from the special file
-	vector<string> subList = readSubList("./Files/publishcontent.txt");
+	vector<string> subList = readSubList(m_pDataPanel->getFileName());
 
 	long elementAllLength = 0;
 	for (vector<string>::size_type i = 0; i != subList.size(); ++i) {

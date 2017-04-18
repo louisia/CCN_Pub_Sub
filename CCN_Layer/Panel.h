@@ -14,7 +14,7 @@
 
 class Panel {
 public:
-    Panel( std::string localIP );
+    Panel( std::string localIP);
     virtual ~Panel();
 
     /*
@@ -123,6 +123,7 @@ private:
 
     MsgSender m_msgSender;                            //the send thread to send message
     MsgReceiver m_msgReceiver;                        //the receive thread to receive message
+
 };
 
 #endif /* MSGHANDLER_H_ */
