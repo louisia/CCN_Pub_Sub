@@ -64,7 +64,10 @@ vector<string> SubListUploader::readSubList(string fileName) {
 
 		if (!node["content"].isNull()) {
 
-			subList.push_back(node["cd"].asString());
+			vector<string>prefixs=getPrexfixs(node["cd"].asString());
+
+			for(vector<string>::size_type i=0;i<prefixs.size();i++)
+				subList.push_back(prefixs[i]);
 
 		}
 	}
