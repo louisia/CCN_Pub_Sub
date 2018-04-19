@@ -1,0 +1,3 @@
+/sports
+/sports/basketball
+/sports/football
