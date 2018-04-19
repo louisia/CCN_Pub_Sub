@@ -199,7 +199,7 @@ void EPS_Router::handleMsg(Message &msg) {
  */
 void EPS_Router::handleSubscribe(Message &msg) {
 	cout << "**********recv subscribe start***********" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength,ERot);
 	cout << "**********recv subscribe end*************" << endl;
 
 	//判断是否存在FIB表用于转发该消息，注意：这个判断必须在ST更新之前
@@ -217,7 +217,7 @@ void EPS_Router::handleSubscribe(Message &msg) {
 		msg._faceID = faceList[0];
 
 		cout << "**********send groupIpRequest start***********" << endl;
-		printMsg(msg._buffer, msg._msgLength);
+		printMsg(msg._buffer, msg._msgLength,ERot);
 		cout << "**********send groupIpRequest end***********" << endl;
 
 		sendMsg(msg, msg._faceID);
@@ -240,7 +240,7 @@ void EPS_Router::handleSubscribe(Message &msg) {
 void EPS_Router::handlePublish(Message &msg) {
 
 	cout << "*********recv publish start********" << endl;
-	printMsg(msg._buffer, msg._bufferLength);
+	printMsg(msg._buffer, msg._bufferLength, ERot);
 	cout << "*********recv publish end**********" << endl;
 	//get the forwarding ports of the publish message
 	set<int> faceList = getSTFaceList(msg);
@@ -254,7 +254,7 @@ void EPS_Router::handlePublish(Message &msg) {
 			tmp->_multicastIp = "";
 
 			cout << "*********send publish start********" << endl;
-			printMsg((*tmp)._buffer, (*tmp)._bufferLength);
+			printMsg((*tmp)._buffer, (*tmp)._bufferLength,ERot);
 			cout << "*********send publish end**********" << endl;
 
 			sendMsg(*tmp, tmp->_faceID);
@@ -277,7 +277,7 @@ void EPS_Router::handlePublish(Message &msg) {
 void EPS_Router::handleRPublish(Message &msg) {
 
 	cout << "*******recv rpublish start*****" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength,ERot);
 	cout << "*******recv rpublish end******" << endl;
 
 	string rendezvous = getRendezvousName(msg);
@@ -289,7 +289,7 @@ void EPS_Router::handleRPublish(Message &msg) {
 	}
 	msg._faceID = faceList[0];
 	cout << "*******send rpublish start*****" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength,ERot);
 	cout << "*******send rpublish end******" << endl;
 	sendMsg(msg, msg._faceID);
 }
@@ -304,7 +304,7 @@ void EPS_Router::handleRPublish(Message &msg) {
 void EPS_Router::handleGroupIpResponse(Message &msg) {
 
 	cout << "*********recv groupIpresponse start********" << endl;
-	printMsg(msg._buffer, msg._bufferLength);
+	printMsg(msg._buffer, msg._bufferLength,ERot);
 	cout << "*********recv groupIpresponse end**********" << endl;
 
 	int pos = sizeof(PacketType);

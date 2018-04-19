@@ -7,13 +7,15 @@
 
 #include "Subscriber.h"
 #include"openssl/md5.h"
-Subscriber::Subscriber(std::string localIP, string filename) :
-		DataPanel(localIP,filename), m_subscribeThreading(this) {
+Subscriber::Subscriber(std::string localIP) :
+		DataPanel(localIP), m_subscribeThreading(this) {
 	m_sequenceNumber = 0;
 	m_subscribeThreading.create(&m_subscribeThreading);
+	m_isSubListNew = true;
 }
 
 Subscriber::~Subscriber() {
+
 
 }
 
@@ -24,12 +26,21 @@ void Subscriber::subscribe() {
 		return;
 
 	//get the content name subList in the System
-	vector<string> subList = getSubList();
-	if (subList.size() == 0)
+	if (m_subList.size() == 0)
 		return;
+
+	if (m_isSubListNew) {
+		m_isSubListNew = false;
+		clog << endl << "------choose the following CD------" << endl;
+		for (int i = 0; i < m_subList.size(); i++) {
+			clog << m_subList[i] << endl;
+		}
+
+	}
+
 	//TODO pick a random contentName from subList
-	string contentName = getContentName(subList);
-	if(contentName=="")
+	string contentName = getContentName(m_subList);
+	if (contentName == "")
 		return;
 	string rendezvous = hRW(contentName, rRotSet);
 
@@ -51,38 +62,18 @@ void Subscriber::handleMsg(Message& msg) {
 
 void Subscriber::handlePublish(Message& msg) {
 	cout << "**********handlePublish() start*************" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength, Sub);
 	cout << "**********handlePublish() end*************" << endl;
 	msg.release();
 }
 
 string Subscriber::getContentName(vector<string> subList) {
-	ifstream infile(getFileName().c_str());
-	if (infile) {
-		char buffer[1024];
-		memset(buffer, 0, sizeof(buffer));
-		while (!infile.eof()) {
-			infile.getline(buffer, sizeof(buffer));
-			string s(buffer);
-			//TODO 这边subscriber提供的CD与publisher提供的CD之间的关系需要进一步优化
-			if (find(subList.begin(), subList.end(), s) != subList.end()) {
-				if (m_subscribeCdList.count(s) == 0) {
-					m_subscribeCdList[s] = false;
-				}
-			}
-		}
-	} else {
-		cerr << "open " << getFileName() << " failed" << endl;
-	}
-
-	string contentName = "";
-	for (map<string, bool>::iterator iter = m_subscribeCdList.begin();
-			iter != m_subscribeCdList.end(); iter++) {
-		if ((*iter).second == false) {
-			contentName = (*iter).first;
-			(*iter).second = true;
-			break;
-		}
+	string contentName;
+	clog << "please input your interest cd: ";
+	cin >> contentName;
+	if (find(subList.begin(), subList.end(), contentName) == subList.end()) {
+		clog << "invaild content name" << endl;
+		contentName = "";
 	}
 	return contentName;
 }
@@ -141,10 +132,12 @@ void Subscriber::subscribeSendMsg(std::string contentName,
 	msg._type = UDP;
 
 	cout << "**********subscribeSendMsg() start*************" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength, Sub);
 	cout << "**********subscribeSendMsg() end*************" << endl;
+	clog << "**********send subscribe successful*************" << endl;
 
 	//send message
 	sendMsg(msg, msg._faceID);
+
 }
 

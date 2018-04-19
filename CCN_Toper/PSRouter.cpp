@@ -44,7 +44,7 @@ void PS_Router::handleMsg(Message& msg) {
 
 void PS_Router::handleSubscribe(Message& msg) {
 	cout << "***************recv subscribe start************" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength, Rot);
 	cout << "***************recv subscribe end************" << endl;
 
 	std::string rendezvous = getRendezvousName(msg);
@@ -58,7 +58,7 @@ void PS_Router::handleSubscribe(Message& msg) {
 	if (addSTItem(msg)) {
 		msg._faceID = faceList[0];
 		cout << "***************send subscribe start************" << endl;
-		printMsg(msg._buffer,msg._msgLength);
+		printMsg(msg._buffer, msg._msgLength, Rot);
 		cout << "***************send subscribe end************" << endl;
 		sendMsg(msg, msg._faceID);
 
@@ -72,7 +72,7 @@ void PS_Router::handleSubscribe(Message& msg) {
 void PS_Router::handlePublish(Message& msg) {
 
 	cout << "***************recv publish start************" << endl;
-	printMsg(msg._buffer, msg._bufferLength);
+	printMsg(msg._buffer, msg._bufferLength, Rot);
 	cout << "***************recv publish end************" << endl;
 
 	set<int> faceList = getSTFaceList(msg);
@@ -84,7 +84,7 @@ void PS_Router::handlePublish(Message& msg) {
 			tmp->_faceID = *iter;
 
 			cout << "***************send publish start************" << endl;
-			printMsg(msg._buffer, msg._bufferLength);
+			printMsg(msg._buffer, msg._bufferLength, Rot);
 			cout << "***************send publish end************" << endl;
 
 			sendMsg(*tmp, tmp->_faceID);
@@ -97,7 +97,7 @@ void PS_Router::handlePublish(Message& msg) {
 void PS_Router::handleRPublish(Message& msg) {
 
 	cout << "**********recv rpublish start************" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength, Rot);
 	cout << "**********recv rpublish end ************" << endl;
 
 	string rendezvous = getRendezvousName(msg);
@@ -111,7 +111,7 @@ void PS_Router::handleRPublish(Message& msg) {
 	msg._faceID = faceList[0];
 
 	cout << "**********send rpublish start************" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength, Rot);
 	cout << "**********send rpublish end ************" << endl;
 
 	sendMsg(msg, msg._faceID);

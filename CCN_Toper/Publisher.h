@@ -18,7 +18,7 @@
 
 class Publisher: public DataPanel {
 public:
-	Publisher(std::string localIP,std::string filename);
+	Publisher(std::string localIP);
 	virtual ~Publisher();
 
 	/*
@@ -57,6 +57,8 @@ private:
 	PublishThreading m_publishThreading;
 
 	int m_sequenceNumber;
+
+	bool m_isSubListNew;
 
 };
 

@@ -27,6 +27,6 @@ void PublishThreading::running()
     {
         m_pPublisher->publish();
 
-        sleep( 50 );
+        sleep( 5 );
     }
 }

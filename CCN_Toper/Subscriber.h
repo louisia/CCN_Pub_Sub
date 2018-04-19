@@ -13,7 +13,7 @@
 
 class Subscriber: public DataPanel {
 public:
-	Subscriber(std::string localIP,string filename);
+	Subscriber(std::string localIP);
 	virtual ~Subscriber();
 
 	void subscribe();
@@ -34,6 +34,7 @@ private:
 	SubscribeThreading m_subscribeThreading; //the threading for sending subscription message
 	int m_sequenceNumber;
 	map<string,bool>m_subscribeCdList;
+	bool m_isSubListNew;
 };
 
 #endif /* SUBSCRIBER_H_ */

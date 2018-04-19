@@ -47,40 +47,27 @@
 #include <vector>
 using namespace std;
 
-void createSub(string localip, string controllerip, string infilename,
-		string outfilename) {
-
+void createSub(string localip, string controllerip, string outfilename) {
 	ofstream ofs(outfilename.c_str());
 	std::cout.rdbuf(ofs.rdbuf());
 	std::cerr.rdbuf(ofs.rdbuf());
-
-	Subscriber subscirber(localip, infilename);
+	Subscriber subscirber(localip);
 	ControlPanel controlPanel(&subscirber, localip, controllerip);
 	controlPanel.setRole(Sub);
 	controlPanel.running();
 }
-void createPub(string localip, string controllerip, string infilename,
-		string outfilename) {
+
+void createPub(string localip, string controllerip, string outfilename) {
 	ofstream ofs(outfilename.c_str());
 	std::cout.rdbuf(ofs.rdbuf());
 	std::cerr.rdbuf(ofs.rdbuf());
 
-	Publisher pubisher(localip, infilename);
+	Publisher pubisher(localip);
 	ControlPanel controlPanel(&pubisher, localip, controllerip);
 	controlPanel.setRole(Pub);
 	controlPanel.running();
 }
-void createPS(string localip, string controllerip, string outfilename) {
-	ofstream ofs(outfilename.c_str());
-	std::cout.rdbuf(ofs.rdbuf());
-	std::cerr.rdbuf(ofs.rdbuf());
 
-	PS_Router psrouter(localip);
-	ControlPanel controlPanel(&psrouter, localip, controllerip);
-	controlPanel.setRole(Rot);
-	controlPanel.running();
-
-}
 void createEPS(string localip, string controllerip, string outfilename) {
 	ofstream ofs(outfilename.c_str());
 	std::cout.rdbuf(ofs.rdbuf());
@@ -92,6 +79,19 @@ void createEPS(string localip, string controllerip, string outfilename) {
 	controlPanel.running();
 
 }
+
+void createPS(string localip, string controllerip, string outfilename) {
+	ofstream ofs(outfilename.c_str());
+	std::cout.rdbuf(ofs.rdbuf());
+	std::cerr.rdbuf(ofs.rdbuf());
+
+	PS_Router psrouter(localip);
+	ControlPanel controlPanel(&psrouter, localip, controllerip);
+	controlPanel.setRole(Rot);
+	controlPanel.running();
+
+}
+
 void createRPS(string localip, string controllerip, string outfilename) {
 	ofstream ofs(outfilename.c_str());
 	std::cout.rdbuf(ofs.rdbuf());
@@ -104,557 +104,46 @@ void createRPS(string localip, string controllerip, string outfilename) {
 
 }
 
-void testRunning1(string localip, string controllerip) {
-	int id = fork();
-	if (id != 0) {
-		ofstream ofs("Logs/controller_log");
-		std::cout.rdbuf(ofs.rdbuf());
-		std::cerr.rdbuf(ofs.rdbuf());
-		Controller controller(controllerip);
-		controller.running();
-
-	} else {
-		sleep(1);
-
-		int id = fork();
-
-		if (id != 0) {
-			createSub(localip, controllerip, "Files/subscribecontent.txt",
-					"Logs/subscirber_log");
-
-		} else {
-			sleep(1);
-
-			int id = fork();
-
-			if (id != 0) {
-
-				createPub(localip, controllerip, "Files/publishcontent.txt",
-						"Logs/publisher_log");
-
-			} else {
-				sleep(1);
-
-				int id = fork();
-
-				if (id != 0) {
-
-					createPS(localip, controllerip, "Logs/psrouter_log");
-
-				} else {
-					sleep(1);
-
-					int id = fork();
-
-					if (id != 0) {
-
-						createEPS(localip, controllerip, "Logs/epsrouter_log");
-
-					} else {
-						sleep(1);
-
-						int id = fork();
-
-						if (id != 0) {
-
-							createRPS(localip, controllerip,
-									"Logs/rpsrouter_log");
-
-						}
-
-					}
-
-				}
-			}
-		}
-	}
-}
-
-void testRunning23(string localip, string controllerip) {
-	int id = fork();
-	if (id != 0) {
-		ofstream ofs("Logs/controller_log");
-		std::cout.rdbuf(ofs.rdbuf());
-		std::cerr.rdbuf(ofs.rdbuf());
-		Controller controller(controllerip);
-		controller.running();
-
-	} else {
-		sleep(1);
-
-		int id = fork();
-
-		if (id != 0) {
-			createSub(localip, controllerip, "Files/subscribecontent.txt",
-					"Logs/subscirber_log");
-
-		} else {
-			sleep(1);
-
-			int id = fork();
-
-			if (id != 0) {
-
-				createPub(localip, controllerip, "Files/publishcontent.txt",
-						"Logs/publisher_log");
-
-			} else {
-				sleep(1);
-
-				int id = fork();
-
-				if (id != 0) {
-
-					createPS(localip, controllerip, "Logs/psrouter_log");
-
-				} else {
-					sleep(1);
-
-					int id = fork();
-
-					if (id != 0) {
-
-						createEPS(localip, controllerip, "Logs/epsrouter_log");
-
-					} else {
-						sleep(1);
-
-						int id = fork();
-
-						if (id != 0) {
-
-							createRPS(localip, controllerip,
-									"Logs/rpsrouter_log");
-
-						} else {
-							sleep(1);
-
-							int id = fork();
-
-							if (id != 0) {
-
-								createSub(localip, controllerip,
-										"Files/subscribecontent1.txt",
-										"Logs/subscirber_log");
-							}
-						}
-
-					}
-
-				}
-			}
-		}
-	}
-}
-
-void testRunning4(string localip, string controllerip) {
-	int id = fork();
-	if (id != 0) {
-		ofstream ofs("Logs/controller_log");
-		std::cout.rdbuf(ofs.rdbuf());
-		std::cerr.rdbuf(ofs.rdbuf());
-		Controller controller(controllerip);
-		controller.running();
-
-	} else {
-		sleep(1);
-
-		int id = fork();
-
-		if (id != 0) {
-			createSub(localip, controllerip, "Files/subscribecontent.txt",
-					"Logs/subscirber_log");
-
-		} else {
-			sleep(1);
-
-			int id = fork();
-
-			if (id != 0) {
-
-				createPub(localip, controllerip, "Files/publishcontent.txt",
-						"Logs/publisher_log");
-
-			} else {
-				sleep(1);
-
-				int id = fork();
-
-				if (id != 0) {
-
-					createPS(localip, controllerip, "Logs/psrouter_log");
-
-				} else {
-					sleep(1);
-
-					int id = fork();
-
-					if (id != 0) {
-
-						createEPS(localip, controllerip, "Logs/epsrouter_log");
-
-					} else {
-						sleep(1);
-
-						int id = fork();
-
-						if (id != 0) {
-
-							createRPS(localip, controllerip,
-									"Logs/rpsrouter_log");
-
-						} else {
-							sleep(1);
-
-							int id = fork();
-
-							if (id != 0) {
-								createSub(localip, controllerip,
-										"Files/subscribecontent1.txt",
-										"Logs/subscirber1_log");
-
-							} else {
-								sleep(1);
-
-								int id = fork();
-
-								if (id != 0) {
-									createSub(localip, controllerip,
-											"Files/subscribecontent2.txt",
-											"Logs/subscirber2_log");
-
-								} else {
-									sleep(1);
-
-									int id = fork();
-
-									if (id != 0) {
-										createEPS(localip, controllerip,
-												"Logs/epsrouter1_log");
-
-									}
-								}
-							}
-						}
-
-					}
-
-				}
-			}
-		}
-	}
-}
-
-void testRunning5(string localip, string controllerip) {
-	int id = fork();
-	if (id != 0) {
-		ofstream ofs("Logs/controller_log");
-		std::cout.rdbuf(ofs.rdbuf());
-		std::cerr.rdbuf(ofs.rdbuf());
-		Controller controller(controllerip);
-		controller.running();
-
-	} else {
-		sleep(1);
-
-		int id = fork();
-
-		if (id != 0) {
-			createSub(localip, controllerip, "Files/subscribecontent.txt",
-					"Logs/subscirber_log");
-
-		} else {
-			sleep(1);
-
-			int id = fork();
-
-			if (id != 0) {
-
-				createPub(localip, controllerip, "Files/publishcontent.txt",
-						"Logs/publisher_log");
-
-			} else {
-				sleep(1);
-
-				int id = fork();
-
-				if (id != 0) {
-
-					createPS(localip, controllerip, "Logs/psrouter_log");
-
-				} else {
-					sleep(1);
-
-					int id = fork();
-
-					if (id != 0) {
-
-						createEPS(localip, controllerip, "Logs/epsrouter_log");
-
-					} else {
-						sleep(1);
-
-						int id = fork();
-
-						if (id != 0) {
-
-							createRPS(localip, controllerip,
-									"Logs/rpsrouter_log");
-
-						} else {
-							sleep(1);
-
-							int id = fork();
-
-							if (id != 0) {
-								createSub(localip, controllerip,
-										"Files/subscribecontent1.txt",
-										"Logs/subscirber1_log");
-
-							}
-						}
-
-					}
-
-				}
-			}
-		}
-	}
-}
-
-void testRunning6(string localip, string controllerip) {
-	int id = fork();
-	if (id != 0) {
-		ofstream ofs("Logs/controller_log");
-		std::cout.rdbuf(ofs.rdbuf());
-		std::cerr.rdbuf(ofs.rdbuf());
-		Controller controller(controllerip);
-		controller.running();
-
-	} else {
-		sleep(1);
-
-		int id = fork();
-
-		if (id != 0) {
-			createSub(localip, controllerip, "Files/subscribecontent.txt",
-					"Logs/subscirber_log");
-
-		} else {
-			sleep(1);
-
-			int id = fork();
-
-			if (id != 0) {
-
-				createSub(localip, controllerip, "Files/subscribecontent1.txt",
-						"Logs/subscirber1_log");
-
-			} else {
-				sleep(1);
-
-				int id = fork();
-
-				if (id != 0) {
-
-					createPS(localip, controllerip, "Logs/psrouter_log");
-
-				} else {
-					sleep(1);
-
-					int id = fork();
-
-					if (id != 0) {
-
-						createPS(localip, controllerip, "Logs/psrouter1_log");
-
-					} else {
-						sleep(1);
-
-						int id = fork();
-
-						if (id != 0) {
-
-							createEPS(localip, controllerip,
-									"Logs/epsrouter_log");
-
-						}
-						else {
-							sleep(1);
-
-							int id = fork();
-
-							if (id != 0) {
-								createSub(localip, controllerip,
-										"Files/subscribecontent2.txt",
-										"Logs/subscirber2_log");
-
-							} else {
-								sleep(1);
-
-								int id = fork();
-
-								if (id != 0) {
-									createPub(localip, controllerip,
-											"Files/publishcontent.txt",
-											"Logs/publisher_log");
-
-								} else {
-									sleep(1);
-
-									int id = fork();
-
-									if (id != 0) {
-										createEPS(localip, controllerip,
-												"Logs/epsrouter1_log");
-
-									} else {
-										sleep(1);
-
-										int id = fork();
-
-										if (id != 0) {
-											createRPS(localip, controllerip,
-													"Logs/rpsrouter_log");
-
-										} else {
-											sleep(1);
-
-											int id = fork();
-
-											if (id != 0) {
-												createPS(localip,
-														controllerip,
-														"Logs/psrouter2_log");
-											} else {
-												sleep(1);
-
-												int id = fork();
-
-												if (id != 0) {
-													createPub(localip,
-															controllerip,
-															"Files/publishcontent1.txt",
-															"Logs/publisher1_log");
-
-												} else {
-													sleep(1);
-
-													int id = fork();
-
-													if (id != 0) {
-														createSub(localip,
-																controllerip,
-																"Files/subscribecontent3.txt",
-																"Logs/subscriber3_log");
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-void testRunning7(string localip, string controllerip) {
-	int id = fork();
-	if (id != 0) {
-		ofstream ofs("Logs/controller_log");
-		std::cout.rdbuf(ofs.rdbuf());
-		std::cerr.rdbuf(ofs.rdbuf());
-		Controller controller(controllerip);
-		controller.running();
-
-	} else {
-		sleep(1);
-
-		int id = fork();
-
-		if (id != 0) {
-			createSub(localip, controllerip, "Files/subscribecontent.txt",
-					"Logs/subscirber_log");
-
-		} else {
-			sleep(1);
-
-			int id = fork();
-
-			if (id != 0) {
-
-				createPub(localip, controllerip, "Files/publishcontent.txt",
-						"Logs/publisher_log");
-
-			} else {
-				sleep(1);
-
-				int id = fork();
-
-				if (id != 0) {
-
-					createPS(localip, controllerip, "Logs/psrouter_log");
-
-				} else {
-					sleep(1);
-
-					int id = fork();
-
-					if (id != 0) {
-
-						createEPS(localip, controllerip, "Logs/epsrouter_log");
-
-					} else {
-						sleep(1);
-
-						int id = fork();
-
-						if (id != 0) {
-
-							createRPS(localip, controllerip,
-									"Logs/rpsrouter_log");
-
-						} else {
-							sleep(1);
-
-							int id = fork();
-
-							if (id != 0) {
-
-								createSub(localip, controllerip,
-										"Files/subscribecontent1.txt",
-										"Logs/subscirber1_log");
-							} else {
-								sleep(1);
-
-								int id = fork();
-
-								if (id != 0) {
-
-									createPub(localip, controllerip,
-											"Files/publishcontent1.txt",
-											"Logs/publisher1_log");
-								}
-							}
-
-						}
-
-					}
-				}
-			}
-		}
-	}
-}
-
 int main(int argc, char** argv) {
 
-	string localip="::1";
-	string controllerip="::1";
-	testRunning6(localip, controllerip);
+	if (argc == 2) {
+		string rolename(argv[0]);
+		if (rolename.find("CN") != string::npos) {
+			ofstream ofs("../Logs/CN_log.txt");
+			std::cout.rdbuf(ofs.rdbuf());
+			std::cerr.rdbuf(ofs.rdbuf());
+			Controller controller(argv[1]);
+			controller.running();
+		} else {
+			cout << "Usage Example: ./CN loaclip" << endl;
+			return 1;
+		}
+
+	} else if (argc == 3) {
+		string rolename(argv[0]);
+		if (rolename.find("RN") != string::npos) {
+			string outfilename = "../Logs/" + rolename + "_log.txt";
+			createRPS(argv[1], argv[2], outfilename);
+		} else if (rolename.find("Sub") != string::npos) {
+			string outfilename = "../Logs/" + rolename + "_log.txt";
+			createSub(argv[1], argv[2], outfilename);
+		} else if (rolename.find("Pub") != string::npos) {
+			string outfilename = "../Logs/" + rolename + "_log.txt";
+			createPub(argv[1], argv[2], outfilename);
+		} else if (rolename.find("EN") != string::npos) {
+			string outfilename = "../Logs/" + rolename + "_log.txt";
+			createEPS(argv[1], argv[2], outfilename);
+		} else if (rolename.find("PSN") != string::npos) {
+			string outfilename = "../Logs/" + rolename + "_log.txt";
+			createPS(argv[1], argv[2], outfilename);
+		} else {
+			cout << "argv[0] error :CN RN Sub Pub EN PSN" << endl;
+		}
+
+	} else {
+		cout << "Usage Example: ./roleName loaclip controllerip" << endl;
+		return 1;
+	}
 
 	return 0;
 }

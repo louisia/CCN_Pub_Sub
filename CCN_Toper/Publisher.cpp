@@ -11,13 +11,15 @@
 #include <fstream>
 #include<openssl/md5.h>
 #include<set>
+#include<algorithm>
 using namespace std;
 
-Publisher::Publisher(std::string localIP,string filename) :
-		DataPanel(localIP,filename), m_publishThreading(this) {
+Publisher::Publisher(std::string localIP) :
+		DataPanel(localIP), m_publishThreading(this) {
 
-	m_sequenceNumber=0;
+	m_sequenceNumber = 0;
 	m_publishThreading.create(&m_publishThreading);
+	m_isSubListNew = true;
 }
 
 Publisher::~Publisher() {
@@ -28,26 +30,25 @@ Publisher::~Publisher() {
  */
 void Publisher::publish() {
 
-	if (m_contentSet.size() == 0) {
-		//read the content from the file
-		readContent(getFileName());
-	}
 
-	int delNum = 0;
-	for (int i = 0; i < m_contentSet.size() - delNum; ++i) {
-		Json::Value node = m_contentSet[i];
-		if (translateTime(node["time"].asString()) <= getCurrentTime()) {
-			//publish the content
-			publishContent(node["content"].asString(), node["cd"].asString());
-			//delete the content which has been published
-			m_contentSet[i].swap(
-					m_contentSet[m_contentSet.size() - delNum - 1]);
+	if (m_subList.size() == 0)
+			return;
 
-			i--;
-			delNum++;
+		if (m_isSubListNew) {
+			m_isSubListNew = false;
+			clog << endl << "------choose the following CD------" << endl;
+			for (int i = 0; i < m_subList.size(); i++) {
+				clog << m_subList[i] << endl;
+			}
+
 		}
-	}
-	m_contentSet.resize(m_contentSet.size() - delNum);
+
+	string cd, content;
+	clog << "please input the CD:";
+	cin >> cd;
+	clog << "please input the content:";
+	cin >> content;
+	publishContent(content, cd);
 }
 
 /*
@@ -81,7 +82,8 @@ void Publisher::publishSendMsg(std::string contentName, std::string content,
 	PacketType type = RPublish;
 	msg._bufferLength = sizeof(PacketType) + sizeof(Role) + sizeof(int)
 			+ sizeof(int) + rendezvous.length() + sizeof(int)
-			+ contentName.length() + sizeof(int) + content.length()+sizeof(int);
+			+ contentName.length() + sizeof(int) + content.length()
+			+ sizeof(int);
 
 	msg._buffer = new char[msg._bufferLength];
 
@@ -122,11 +124,9 @@ void Publisher::publishSendMsg(std::string contentName, std::string content,
 	memcpy(msg._buffer + pos, &m_sequenceNumber, sizeof(int));
 	pos += len;
 
-
-
 	vector<int> faceList = getFaceList(rendezvous);
 
-	if (faceList.size() == 0){
+	if (faceList.size() == 0) {
 		msg.release();
 		return;
 	}
@@ -135,12 +135,12 @@ void Publisher::publishSendMsg(std::string contentName, std::string content,
 	msg._msgLength = pos;
 
 	cout << "**********send rpublish start*************" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength, Pub);
 	cout << "**********send rpublish end*************" << endl;
+	clog << "**********send publish successful*************" << endl;
 
 	//send message
 	sendMsg(msg, msg._faceID);
-	sleep(50);
 
 }
 

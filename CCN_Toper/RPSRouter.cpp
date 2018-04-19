@@ -47,7 +47,7 @@ void RPS_Router::handleMsg(Message& msg) {
 
 void RPS_Router::handleSubscribe(Message& msg) {
 	cout << "**********recv subscribe start*************" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength, RRot);
 	cout << "**********recv subscribe end*************" << endl;
 
 	//判断是否存在FIB表用于转发该消息，注意：这个判断必须在ST更新之前
@@ -80,7 +80,7 @@ void RPS_Router::handleSubscribe(Message& msg) {
 void RPS_Router::handlePublish(Message &msg) {
 
 	cout << "***************recv Publish start************" << endl;
-	printMsg(msg._buffer, msg._bufferLength);
+	printMsg(msg._buffer, msg._bufferLength, RRot);
 	cout << "***************recv Publish end************" << endl;
 
 	set<int> faceList = getSTFaceList(msg);
@@ -99,7 +99,7 @@ void RPS_Router::handlePublish(Message &msg) {
 void RPS_Router::handleRPublish(Message& msg) {
 
 	cout << "***************recv rpublish start************" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength, RRot);
 	cout << "***************recv rpublish end************" << endl;
 	std::string rendezvous = getRendezvousName(msg);
 	RoleID role = getRoleID();
@@ -133,7 +133,7 @@ void RPS_Router::handleRPublish(Message& msg) {
 				Message *tmp = msg.dup();
 				cout << "*******send publish udp start to port " << *iter
 						<< "**********" << endl;
-				printMsg((*tmp)._buffer, (*tmp)._msgLength);
+				printMsg((*tmp)._buffer, (*tmp)._msgLength, RRot);
 				cout << "*******send publish udp end to port " << *iter
 						<< "**********" << endl;
 				sendMsg((*tmp), (*tmp)._faceID);
@@ -156,7 +156,7 @@ void RPS_Router::handleRPublish(Message& msg) {
 					Message *tmp = msg.dup();
 					cout << "**********send publish multicast start to "
 							<< msg._multicastIp << endl << "*************";
-					printMsg((*tmp)._buffer, (*tmp)._msgLength);
+					printMsg((*tmp)._buffer, (*tmp)._msgLength, RRot);
 					cout << "**********send publish multicast end to "
 							<< msg._multicastIp << endl << "*************";
 					sendMsg((*tmp), (*tmp)._faceID);
@@ -183,7 +183,7 @@ void RPS_Router::handleGroupIpRequest(Message &msg) {
 	 * 因为一个请求到达报文，只会经过一个汇聚节点，即这个汇聚节点收到后，必须将其释放
 	 */
 	cout << "**********recv groupIpRequest() start*************" << endl;
-	printMsg(msg._buffer, msg._msgLength);
+	printMsg(msg._buffer, msg._msgLength, RRot);
 	cout << "**********recv groupIpRequest() end*************" << endl;
 
 	addSTItem(msg);
@@ -299,7 +299,7 @@ void RPS_Router::handleGroupIpRequest(Message &msg) {
 	GroupIPResponseMsg._type = UDP;
 
 	cout << "**********send groupIpResponse() start*************" << endl;
-	printMsg(GroupIPResponseMsg._buffer, GroupIPResponseMsg._msgLength);
+	printMsg(GroupIPResponseMsg._buffer, GroupIPResponseMsg._msgLength, RRot);
 	cout << "**********send groupIpResponse() end*************" << endl;
 
 	sendMsg(GroupIPResponseMsg, GroupIPResponseMsg._faceID);
