@@ -30,7 +30,7 @@ void Topology::initFromFile( )
     //open the file
     std::ifstream ifs;
 
-    ifs.open( "./Files/topology.txt" );
+    ifs.open( "../Files/topology.txt" );
 
     if( !ifs )
     {

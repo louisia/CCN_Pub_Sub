@@ -32,10 +32,9 @@ typedef int Time_t;
 
 #define CBFLENGTH 15
 
-#define GROUPIPPREFIX "ff02"
+#define GROUPIPPREFIX "ff0E"
 typedef int FaceID;
 
-void printMsg(const char* msg, int len);
 
 
 enum MessageType {
@@ -220,4 +219,7 @@ unsigned long getMD5ID(string name) ;
 std::string hRW(std::string contentName,
 			map<string, unsigned long> rRotSet);
 std::vector<std::string> getPrexfixs(std::string str);
+
+void printMsg(const char* msg, int len, Role r);
+
 #endif /* STRUCTURE_H_ */

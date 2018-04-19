@@ -30,9 +30,12 @@ Time_t translateTime(string t) {
 }
 
 vector<string> getPrexfixs(string str) {
+	vector<string> result;
+	if(str.size() < 1)
+		return result;
+
 	string tmp = str.substr(1, str.length());
 
-	vector<string> result;
 
 	int prepos = 0;
 	string::size_type pos = 0;
@@ -123,7 +126,7 @@ bool isInBF(STItem &st, string &str) {
 	return true;
 }
 
-void printMsg(const char* msg, int len) {
+void printMsg(const char* msg, int len, Role r) {
 	std::cout << "--------------Message Print--------------" << std::endl;
 
 	if (len <= 0) {
@@ -364,6 +367,12 @@ void printMsg(const char* msg, int len) {
 		for (vector<string>::size_type i = 0; i != subList.size(); ++i) {
 			cout << subList[i] << endl;
 		}
+		if (r == Pub) {
+			for (vector<string>::size_type i = 0; i != subList.size(); ++i) {
+				clog << subList[i] << endl;
+			}
+		}
+
 		break;
 
 	case SubListDownload:
@@ -400,6 +409,13 @@ void printMsg(const char* msg, int len) {
 
 		for (vector<string>::size_type i = 0; i != subList.size(); ++i) {
 			cout << subList[i] << endl;
+
+		}
+
+		if (r == Sub) {
+			for (vector<string>::size_type i = 0; i != subList.size(); ++i) {
+				clog << subList[i] << endl;
+			}
 		}
 
 		break;
@@ -505,6 +521,8 @@ void printMsg(const char* msg, int len) {
 		pos += len;
 
 		cout << "contentName		" << contentName << endl;
+		if (r == Sub)
+			clog << endl << "contentName		" << contentName << endl;
 
 		memcpy(&len, msg + pos, sizeof(int));
 		pos += sizeof(int);
@@ -512,6 +530,8 @@ void printMsg(const char* msg, int len) {
 		content = std::string(msg + pos, len);
 		pos += len;
 		cout << "content		" << content << endl;
+		if (r == Sub)
+			clog << "content		" << content << endl;
 
 		memcpy(&sequenceNumber, msg + pos, sizeof(int));
 		pos += sizeof(int);

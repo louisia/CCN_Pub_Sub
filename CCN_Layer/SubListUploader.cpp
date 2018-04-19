@@ -11,10 +11,10 @@
 #include <json/value.h>
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 SubListUploader::SubListUploader() {
 	// TODO Auto-generated constructor stub
-
 }
 
 SubListUploader::~SubListUploader() {
@@ -41,37 +41,29 @@ void SubListUploader::setControlPanel(ControlPanel* pControlPanel) {
  * parameters: fileName : the name of the file which contain the content to publish
  * return value: return the subscription list of the content to publish
  */
-vector<string> SubListUploader::readSubList(string fileName) {
+std::vector<std::string> SubListUploader::readSubList(std::string fileName) {
 	vector<string> subList;
 
 	//read the content from the file
 	ifstream is;
 	is.open(fileName.c_str(), std::ios::binary);
 
-	Json::Reader reader;
-	Json::Value root;
+	if (is) {
+		char buffer[1024];
+		memset(buffer, 0, sizeof(buffer));
+		while (!is.eof()) {
+			is.getline(buffer, sizeof(buffer));
+			string s(buffer);
+			vector<string> prefixs = getPrexfixs(s);
 
-	if (!reader.parse(is, root)) {
-		cerr << "read the subscription list failed..." << endl;
+			for (vector<string>::size_type i = 0; i < prefixs.size(); i++) {
+				if (find(subList.begin(), subList.end(), prefixs[i])
+						== subList.end())
+					subList.push_back(prefixs[i]);
 
-		exit(0);
-	}
-
-	int num = root.size();
-
-	for (int i = 0; i < num; ++i) {
-		Json::Value node = root[i];
-
-		if (!node["content"].isNull()) {
-
-			vector<string>prefixs=getPrexfixs(node["cd"].asString());
-
-			for(vector<string>::size_type i=0;i<prefixs.size();i++)
-				subList.push_back(prefixs[i]);
-
+			}
 		}
 	}
-
 	//close the file
 	is.close();
 
@@ -86,7 +78,7 @@ void SubListUploader::check() {
 	//upload the list of subscription
 
 	//read the subscription from the special file
-	vector<string> subList = readSubList(m_pDataPanel->getFileName());
+	vector<string> subList = readSubList("../Files/CDList.txt");
 
 	long elementAllLength = 0;
 	for (vector<string>::size_type i = 0; i != subList.size(); ++i) {
@@ -154,12 +146,13 @@ void SubListUploader::check() {
 		return;
 	}
 
-	cout << "---------------------sublistupolad------------" << endl;
-	printMsg(msg._buffer, msg._bufferLength);
-	cout << "-----------------------------------------------" << endl;
+	printMsg(msg._buffer, msg._bufferLength, Ctlr);
+	m_pDataPanel->setSubList(subList);
 
 	m_pControlPanel->sendMsg(msg, msg._faceID);
 
+
+
 	//sleep
-	sleep(60);
+	sleep(5);
 }

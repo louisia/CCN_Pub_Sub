@@ -40,7 +40,7 @@ private:
      * parameters: fileName : the name of the file which contain the content to publish
      * return value: return the subscription list of the content to publish
      */
-    vector< string > readSubList( string fileName );
+    std::vector<std::string > readSubList( std::string fileName );
 
 private:
     DataPanel* m_pDataPanel;               //the datapanel controlled by the current controlpanel

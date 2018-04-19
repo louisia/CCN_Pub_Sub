@@ -151,7 +151,7 @@ void Controller::handleRegist(Message& msg) {
 	msgReturn._type=UDP;
 
 	std::cout << "*********Control::handleRegist() start********" << std::endl;
-	printMsg(msgReturn._buffer, msgReturn._msgLength);
+	printMsg(msgReturn._buffer, msgReturn._msgLength, Ctlr);
 	std::cout << "*********Control::handleRegist() end**********" << std::endl;
 
 	sendMsg(msgReturn, msgReturn._faceID);
@@ -261,7 +261,7 @@ void Controller::distributeAdjacentTable() {
 		msgAdja._type=UDP;
 
 		sleep(1);
-		printMsg(msgAdja._buffer, msgAdja._msgLength);
+		printMsg(msgAdja._buffer, msgAdja._msgLength, Ctlr);
 
 		//send the message
 		sendMsg(msgAdja, msgAdja._faceID);
@@ -342,7 +342,7 @@ void Controller::distributeRouterTalbe() {
 
 		sleep(1);
 		cout << "************send msgRouter msg start******************"<<endl;
-		printMsg(msgRouter._buffer, msgRouter._msgLength);
+		printMsg(msgRouter._buffer, msgRouter._msgLength, Ctlr);
 		cout << "************send msgRouter msg end******************"<<endl;;
 
 		//send the message
@@ -469,7 +469,7 @@ void Controller::handleSubListRequest(Message& msg) {
 	msg._type=UDP;
 
 	cout << "************send handleSubListRequest start******************"<<endl;
-	printMsg(msg._buffer, msg._bufferLength);
+	printMsg(msg._buffer, msg._bufferLength, Ctlr);
 	cout << "************send handleSubListRequest end******************"<<endl;
 
 	//send the msg to the requester
@@ -491,7 +491,7 @@ void Controller::running() {
 
 		cout << "***********controller start recv message**********************"
 				<< endl;
-		printMsg(msg._buffer, msg._msgLength);
+		printMsg(msg._buffer, msg._msgLength, Ctlr);
 
 		//analysis the type of the message
 		PacketType type;
