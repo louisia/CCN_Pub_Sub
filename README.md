@@ -9,22 +9,91 @@
 	重新启动网络：sudo service networking restart ,此时可以看到IPV6 Global地址
 	修改/ect/hosts文件：[参考](http://blog.mythsman.com/?p=2677)
 	
-# 安装openssl
+# Ubuntu安装openssl
 1. sudo apt-get install openssl 
 2. sudo apt-get install libssl-dev
 
-# 安装jsoncpp
+# Ubuntu安装jsoncpp
 1. 安装scons，安装json，[参考](http://blog.csdn.net/khalily/article/details/8844546)
-2. 将lib文件下的文件，更名为libjson.a和libjson.so放到/usr/local/lib目录下
+2. 将lib文件下的文件，更名为libjson.a和libjson.so放到/usr/lib目录下
 3. 将include文件下的文件，放到/usr/include目录下
 4. 使用ldconfig命令更新
 	
-# 工程文件编译器配置：
+# Eclipse 工程文件编译器配置：
 1. Project——Properties——C++  Build——Settings——Gross G++ Linker——Library——Libraries
 ```
 -pthread（使用pthread线程库）
 -crypto（使用OpenSSL的哈希计算）
 -json(使用jsoncpp)
+```
+# openssl代码测试
+```
+#include <stdio.h>
+#include <string.h>
+#include <openssl/md5.h>
+
+int main()
+{
+    unsigned char digest[MD5_DIGEST_LENGTH];
+    char string[] = "happy";
+    
+    MD5((unsigned char*)&string, strlen(string), (unsigned char*)&digest);    
+
+    char mdString[33];
+
+    for(int i = 0; i < 16; i++)
+         sprintf(&mdString[i*2], "%02x", (unsigned int)digest[i]);
+
+    printf("md5 digest: %s\n", mdString);
+
+    return 0;
+}
+```
+# jsoncpp代码测试
+```
+#include<iostream>
+#include<json/json.h>
+using namespace std;
+int main(){
+    Json::Value root;
+    Json::FastWroter fast;
+    root["Name"] = ("name");
+    root["Age"] = ("age");
+    cout << fast.write(root) << endl;
+    return 0;
+}
+```
+
+# Centos 安装cmake
+1. 下载cmake
+
+```
+wget https://cmake.org/files/v3.3/cmake-3.3.2.tar.gz  
+
+```
+2. 解压缩
+
+```
+tar xzvf cmake-3.3.2.tar.gz  
+
+```
+
+3. 安装gcc、g++
+
+```
+yum install gcc
+
+yum install gcc-c++
+```
+
+4. 安装cmake
+
+```
+cd cmake-3.3.2  
+  
+./bootstrap 
+gmake
+make install
 ```
 
 # 底层通信方式
@@ -147,8 +216,6 @@ sequenceNumber		2
 8. RPS收到某个EPS的组播地址请求消息时，除了要为该CD分配组播地址，还要提示该EPS从该CD的子条目组播组中退出
 9. subscriber的订阅CD和publisher发布的内容不是在程序中固定，而是每隔一段时间从文件中进行读取，当文件中的订阅CD更新(增加)时，在程序中实时反映
 
-# 隐患
-1. Communicator中的重发机制，在真实网络中运行时，无法估算超时的时间，报文的丢失和报文的耽搁如何正确的判断，以及避免重传的错误
 
 
 
